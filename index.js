@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 // const multer = require("multer")
-// const cors = require("cors")
+const cors = require("cors")
 const { blogModel } = require("./blogModel");
 require("./mongoose")
 app.use(express.json())
