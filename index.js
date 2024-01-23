@@ -34,8 +34,8 @@ app.post("/",async (req,res)=>{
 
 app.get("/", async (req,res)=>{
     const data =  await blogModel.find()
-    const result = await data.save();
+    
 
-    console.log(result)
-    res.send(result)
+  
+    res.send(data)
 }).listen(4000);
