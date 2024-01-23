@@ -2,9 +2,9 @@ const express = require("express");
 const app = express();
 // const multer = require("multer")
 // const cors = require("cors")
-// const { blogModel } = require("./blogModel");
-// require("./mongoose")
-// app.use(express.json())
+const { blogModel } = require("./blogModel");
+require("./mongoose")
+app.use(express.json())
 // app.use(cors())
 // app.use(express.static("public"))
 // const blog = require("./blogModel")
@@ -32,13 +32,17 @@ const app = express();
 // })
 // })
 
-// app.get("/",  (req,res)=>{
-//     // const data =  await blogModel.find()
+app.get("/",  async(req,res)=>{
+    const data =  await blogModel.find()
     
-//     res.send("data")
-// }).listen(4000);
-app.get("/",  (req,res)=>{
-    
-    res.send("data")
+    res.send(data)
 })
 app.listen(4000);
+
+
+
+// app.get("/",  (req,res)=>{
+    
+//     res.send("data")
+// })
+// app.listen(4000);
