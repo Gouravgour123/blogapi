@@ -4,6 +4,6 @@ const blogSchema =new mongoose.Schema({
    name:String,
    image:String
 })
-const blogModel = mongoose.model("student",blogSchema)
+//  mongoose.model("students",blogSchema)
 
-module.exports =  {blogModel}
+module.exports =  mongoose.model("students",blogSchema)
